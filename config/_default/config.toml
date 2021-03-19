@@ -82,3 +82,12 @@ toLower = false
   [[module.mounts]]
     source = "node_modules/instant.page"
     target = "assets/js/vendor/instant.page"
+  [[module.mounts]]
+    source = "leonsans/dist"
+    target = "assets/js/vendor/leonsans"
+  [[module.mounts]]
+    source = "leonsans/examples/js"
+    target = "assets/js/vendor/leon"
+  [[module.mounts]]
+    source = "leonsans/examples/data"
+    target = "static/images/vendor/leonsans"
