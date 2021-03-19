@@ -4,6 +4,8 @@
 {{ $bars := resources.Get "images/bars.svg" }}
 {{ $close := resources.Get "images/close.svg" }}
 
+$breakpoints: global ();
+
 @import 'libs/vars';
 @import 'libs/functions';
 @import 'libs/mixins';

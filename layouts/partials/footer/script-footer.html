@@ -7,7 +7,7 @@
 {{ if eq (hugo.Environment) "development" -}}
   {{ $util := resources.Get "js/util.js" | babel -}}
   {{ $app := resources.Get "js/app.js" | babel -}}
-  {{ $js := slice $lazysizes $jquery $scrollex $scrolly $browser $breakpoints $util $app | resources.Concat "main.js" -}}
+  {{ $js := slice $jquery $scrollex $scrolly $browser $breakpoints $util $app | resources.Concat "main.js" -}}
   <script src="{{ $js.Permalink }}" defer></script>
 {{ else -}}
   {{ $instantPage := resources.Get "js/vendor/instant.page/instantpage.js" | minify -}}
