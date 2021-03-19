@@ -1,21 +1,21 @@
-title = "Hyas"
+title = "Hyas based on Spectral"
 titleSeparator = "-"
 titleAddition = "Modern Hugo Starter"
 description = "Hugo starter helping you build modern websites."
 
 images = ["hyas.png"]
 
-twitterSite = "@henkverlinde"
-twitterCreator = "@henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
-ogLocale = "en_US"
+twitterSite = "@chris1tham"
+twitterCreator = "@chris1tham"
+facebookAuthor = "chris1tham"
+facebookPublisher = "chris1tham"
+ogLocale = "en_AU"
 
 schemaType = "Organization"
 schemaLogo = "logo-hyas.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
+schemaTwitter = "https://twitter.com/chris1tham"
+schemaLinkedIn = "https://www.linkedin.com/in/christham/"
+schemaGitHub = "https://github.com/ChristineTham"
 schemaSection = "blog"
 
 siteLinksSearchBox = false
@@ -28,8 +28,11 @@ landscapePhotoWidths = [1000, 800, 700, 600, 500]
 portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
+
 # Footer
 footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://gethyas.com/\">Hyas</a>"
 
 alert = false
 alertText = "Deliver web projects 10x faster. <a class=\"alert-link\" href=\"https://www.netlify.com/whitepaper/\" target=\"_blank\" rel=\"noopener\">Get the free enterprise paper →</a>"
+
+bannerImage = "images/banner.jpg"

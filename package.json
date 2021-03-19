@@ -1,14 +1,14 @@
 {
-  "name": "@hyas/core",
-  "description": "Hyas core",
-  "version": "1.4.4",
+  "name": "@hyas/spectral",
+  "description": "Hyas Spectral",
+  "version": "1.0.0",
   "hugo-bin": {
     "buildTags": "extended"
   },
   "browserslist": [
     "defaults"
   ],
-  "repository": "https://github.com/h-enk/hyas",
+  "repository": "https://github.com/ChristineTham/hyas",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

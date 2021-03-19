@@ -1,14 +1,29 @@
 [[main]]
-  name = "GitHub"
-  url = "https://github.com/h-enk/hyas"
+  name = "Home"
+  url = "/"
   weight = 10
 
+[[main]]
+  name = "Generic"
+  url = "/generic"
+  weight = 20
+
+[[main]]
+  name = "Elements"
+  url = "/elements"
+  weight = 30
+
+[[main]]
+  name = "GitHub"
+  url = "https://github.com/ChristineTham"
+  weight = 40
+  
 [[social]]
   name = "LinkedIn"
-  url = "https://www.linkedin.com/in/henkverlinde/"
+  url = "https://www.linkedin.com/in/christham/"
   weight = 20
 
 [[social]]
   name = "Twitter"
-  url = "https://twitter.com/henkverlinde"
+  url = "https://twitter.com/chris1tham"
   weight = 30
