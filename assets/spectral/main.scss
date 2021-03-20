@@ -12,7 +12,7 @@ $breakpoints: global ();
 @import 'libs/vendor';
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
-@import 'fontawesome-all.min.css';
+@import '/css/vendor/fontawesome/all.css';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,800,800italic');
 
 /*
@@ -1078,6 +1078,15 @@ $breakpoints: global ();
 				width: 100%;
 			}
 		}
+
+    .cardlink  {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      font-size: 100%;
+      font: inherit;
+      vertical-align: baseline;
+    }
 
 		.content {
 			@include padding(2em, 4em);

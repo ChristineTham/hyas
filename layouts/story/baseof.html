@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  {{ partial "head/head.html" . }}
+  {{ if eq .Kind "home" -}}
+    {{ .Scratch.Set "class" "home" -}}
+    {{ .Scratch.Add "class" " landing" -}}
+  {{ else if eq .Kind "404" -}}
+    {{ .Scratch.Set "class" "error404" -}}
+  {{ else if eq .Kind "page" -}}
+    {{ .Scratch.Set "class" .Type -}}
+    {{ .Scratch.Add "class" " single" -}}
+  {{ else -}}
+    {{ .Scratch.Set "class" .Type -}}
+    {{ .Scratch.Add "class" " list" -}}
+  {{ end -}}
+  {{ .Scratch.Add "class" " is-preload" -}}
+  <body class="{{ .Scratch.Get "class" }}">
+    <div id="page-wrapper" role="document">
+      {{ if and .IsHome .Site.Params.alert }}
+        {{ partial "header/alert.html" . }}
+      {{ end }}
+      {{ partial "header/header.html" . }}
+      <div class="content">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </div>
+    {{/*  {{ block "sidebar-footer" . }}{{ end }}  */}}
+    {{ partial "footer/footer.html" . }}
+    {{ partial "footer/script-footer.html" . }}
+  </body>
+</html>

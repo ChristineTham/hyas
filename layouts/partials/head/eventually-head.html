@@ -1,0 +1,10 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  {{ block "head/eventually-resource-hints" . }}{{ partial "head/resource-hints.html" . }}{{ end }}
+  {{ block "head/eventually-stylesheet" . }}{{ partial "head/eventually-stylesheet.html" . }}{{ end }}
+  {{ block "head/eventually-seo" . }}{{ partial "head/seo.html" . }}{{ end }}
+  {{ block "head/eventually-favicons" . }}{{ partial "head/favicons.html" . }}{{ end }}
+  {{ block "head/eventually-script-header" . }}{{ partial "head/script-header.html" . }}{{ end }}
+</head>

@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  {{ partial "head/eventually-head.html" . }}
+  {{ block "main" . }}{{ end }}
+  <script src="{{ (resources.Get "js/eventually.js").Permalink }}"></script>
+  </body>
+</html>

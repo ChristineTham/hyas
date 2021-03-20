@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ .Site.LanguageCode | default "en" }}">
+  {{ partial "head/spectral-head.html" . }}
+  <body class="landing is-preload">
+    <div id="page-wrapper" role="document">
+      <header id="header" class="alt" >
+        {{ partial "header/spectral.html" . }}
+      </header>
+      <div class="content">
+        {{ block "main" . }}{{ end }}
+      </div>
+    </div>
+    {{/*  {{ block "sidebar-footer" . }}{{ end }}  */}}
+    {{ partial "footer/spectral-footer.html" . }}
+    {{ partial "footer/spectral-script-footer.html" . }}
+  </body>
+</html>

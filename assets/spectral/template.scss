@@ -1,8 +1,0 @@
-// assets/sass/template.scss
-$backgroundImage: {{ .Param "backgroundImage" }};
-$textColor: {{ .Param "textColor" }};
-body{
-	background-color: $backgroundColor;
-	color: $textColor;
-}
-

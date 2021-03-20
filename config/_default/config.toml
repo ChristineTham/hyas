@@ -83,6 +83,15 @@ toLower = false
     source = "node_modules/instant.page"
     target = "assets/js/vendor/instant.page"
   [[module.mounts]]
+    source = "node_modules/@fortawesome/fontawesome-free/webfonts"
+    target = "static/css/vendor/webfonts"
+  [[module.mounts]]
+    source = "node_modules/@fortawesome/fontawesome-free/scss"
+    target = "assets/spectral/vendor/fontawesome"
+  [[module.mounts]]
+    source = "node_modules/@fortawesome/fontawesome-free/css"
+    target = "static/css/vendor/fontawesome"
+  [[module.mounts]]
     source = "leonsans/dist"
     target = "assets/js/vendor/leonsans"
   [[module.mounts]]

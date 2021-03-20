@@ -1,19 +1,18 @@
-{{ $sassTemplate := resources.Get "spectral/template.scss" }}
 {{ if eq (hugo.Environment) "development" -}}
   {{ $options := (dict "targetPath" "main.css" "enableSourceMap" true "includePaths" (slice "node_modules")) -}}
-  {{ $css := resources.Get "spectral/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS $options -}}
+  {{ $css := resources.Get "scss/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS $options -}}
   <link rel="stylesheet" href="{{ $css.Permalink }}">
   {{ $noscriptoptions := (dict "targetPath" "noscript.css" "enableSourceMap" true "includePaths" (slice "node_modules")) -}}
-  {{ $noscript := resources.Get "spectral/noscript.scss" | toCSS $noscriptoptions -}}
-  <link rel="stylesheet" href="{{ $noscript.Permalink }}">
+  {{ $noscript := resources.Get "scss/noscript.scss" | toCSS $noscriptoptions -}}
+  <noscript><link rel="stylesheet" href="{{ $noscript.Permalink }}"></noscript>
 {{ else -}}
   {{ $options := (dict "targetPath" "main.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) -}}
-  {{ $css := $sassTemplate | resources.ExecuteAsTemplate "spectral/main.scss" . | toCSS $options | postCSS (dict "config" "config/postcss.config.js") -}}
+  {{ $css := resources.Get "scss/main.scss"  | resources.ExecuteAsTemplate "style.main.scss" . | toCSS $options | postCSS (dict "config" "config/postcss.config.js") -}}
   {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
   <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
   {{ $noscriptoptions := (dict "targetPath" "noscript.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) -}}
-  {{ $noscript := resources.Get "spectral/noscript.scss" | toCSS $noscriptoptions | postCSS (dict "config" "config/postcss.config.js") -}}
+  {{ $noscript := resources.Get "scss/noscript.scss" | toCSS $noscriptoptions | postCSS (dict "config" "config/postcss.config.js") -}}
   {{ $securenoscript := $noscript | resources.Fingerprint "sha512" -}}
-  <link rel="stylesheet" href="{{ $securenoscript.Permalink }}" integrity="{{ $securenoscript.Data.Integrity }}" crossorigin="anonymous">
+  <noscript><link rel="stylesheet" href="{{ $securenoscript.Permalink }}" integrity="{{ $securenoscript.Data.Integrity }}" crossorigin="anonymous"></noscript>
 {{ end -}}
   <noscript><style>img.lazyload { display: none; }</style></noscript>

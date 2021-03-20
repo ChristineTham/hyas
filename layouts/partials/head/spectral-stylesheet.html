@@ -1,0 +1,18 @@
+{{ if eq (hugo.Environment) "development" -}}
+  {{ $options := (dict "targetPath" "spectral.css" "enableSourceMap" true "includePaths" (slice "node_modules")) -}}
+  {{ $css := resources.Get "spectral/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS $options -}}
+  <link rel="stylesheet" href="{{ $css.Permalink }}">
+  {{ $noscriptoptions := (dict "targetPath" "spectral-noscript.css" "enableSourceMap" true "includePaths" (slice "node_modules")) -}}
+  {{ $noscript := resources.Get "spectral/noscript.scss" | toCSS $noscriptoptions -}}
+  <noscript><link rel="stylesheet" href="{{ $noscript.Permalink }}"></noscript>
+{{ else -}}
+  {{ $options := (dict "targetPath" "spectral.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) -}}
+  {{ $css := resources.Get "spectral/main.scss"  | resources.ExecuteAsTemplate "spectral/main.scss" . | toCSS $options | postCSS (dict "config" "config/postcss.config.js") -}}
+  {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
+  <link rel="stylesheet" href="{{ $secureCSS.Permalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
+  {{ $noscriptoptions := (dict "targetPath" "spectral-noscript.css" "outputStyle" "compressed" "includePaths" (slice "node_modules")) -}}
+  {{ $noscript := resources.Get "spectral/noscript.scss" | toCSS $noscriptoptions | postCSS (dict "config" "config/postcss.config.js") -}}
+  {{ $securenoscript := $noscript | resources.Fingerprint "sha512" -}}
+  <noscript><link rel="stylesheet" href="{{ $securenoscript.Permalink }}" integrity="{{ $securenoscript.Data.Integrity }}" crossorigin="anonymous"></noscript>
+{{ end -}}
+  <noscript><style>img.lazyload { display: none; }</style></noscript>
