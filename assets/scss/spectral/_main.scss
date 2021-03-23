@@ -1,0 +1,58 @@
+/* Main */
+
+#main {
+  > header {
+    @include padding(12rem, 0);
+    @include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url(/images/banner.jpg)'));
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+
+    h2 {
+      font-size: 1.75em;
+      margin: 0 0 (_size(element-margin) * 0.25) 0;
+    }
+
+    p {
+      color: inherit;
+      letter-spacing: _size(letter-spacing-alt);
+      text-transform: none;
+      top: 0;
+
+      a {
+        color: inherit;
+      }
+    }
+
+    @include breakpoint('<=xlarge') {
+      @include padding(10rem, 0);
+    }
+
+    @include breakpoint('<=large') {
+      @include padding(8rem, 3rem);
+    }
+
+    @include breakpoint('<=medium') {
+      @include padding(10rem, 3rem);
+    }
+
+    @include breakpoint('<=small') {
+      @include padding(5rem, 3rem);
+
+      h2 {
+        font-size: 1.25em;
+        margin: 0 0 (_size(element-margin) * 0.5) 0;
+      }
+    }
+  }
+}
+
+body.is-mobile {
+  #main {
+    > header {
+      background-attachment: scroll;
+    }
+  }
+}

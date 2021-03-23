@@ -1,9 +1,3 @@
-{{ $bannerImageParam := .Site.Params.bannerImage }}
-{{ $bannerImage := resources.Get $bannerImageParam }}
-{{ $arrow := resources.Get "images/arrow.svg" }}
-{{ $bars := resources.Get "images/bars.svg" }}
-{{ $close := resources.Get "images/close.svg" }}
-
 $breakpoints: global ();
 
 @import 'libs/vars';
@@ -1454,7 +1448,7 @@ $breakpoints: global ();
 		}
 
 		.close {
-			background-image: url({{ $close.RelPermalink }});
+			background-image: url('/images/close.svg');
 			background-position: 4.85em 1em;
 			background-repeat: no-repeat;
 			border: 0;
@@ -1551,7 +1545,7 @@ $breakpoints: global ();
 							position: relative;
 
 							&:after {
-								background-image: url({{ $bars.RelPermalink }});
+								background-image: url('/images/bars.svg');
 								background-position: right center;
 								background-repeat: no-repeat;
 								content: '';
@@ -1668,7 +1662,7 @@ $breakpoints: global ();
 			z-index: 1;
 
 			&:after {
-				background-image: url({{ $arrow.RelPermalink }});
+				background-image: url('/images/arrow.svg');
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
@@ -1791,7 +1785,7 @@ $breakpoints: global ();
 	#main {
 		> header {
 			@include padding(12em, 0);
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url({{ $bannerImage.RelPermalink }})'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url(/images/banner.jpg'));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1916,7 +1910,7 @@ $breakpoints: global ();
 
 	body.landing {
 		#page-wrapper {
-			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url({{ $bannerImage.RelPermalink }})'));
+			@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', url('/images/banner.jpg')));
 			background-attachment: fixed;
 			background-position: center center;
 			background-repeat: no-repeat;
@@ -1937,7 +1931,7 @@ $breakpoints: global ();
 
 			#banner,
 			.wrapper.style4 {
-				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', 'url({{ $bannerImage.RelPermalink }})'));
+				@include vendor('background-image', ('linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5))', url('/images/banner.jpg')));
 				background-position: center center;
 				background-repeat: no-repeat;
 				background-size: cover;

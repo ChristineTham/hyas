@@ -3,6 +3,7 @@
   {{ partial "head/head.html" . }}
   {{ if eq .Kind "home" -}}
     {{ .Scratch.Set "class" "home" -}}
+    {{ .Scratch.Add "class" " landing" -}}
   {{ else if eq .Kind "404" -}}
     {{ .Scratch.Set "class" "error404" -}}
   {{ else if eq .Kind "page" -}}
@@ -14,16 +15,29 @@
   {{ end -}}
   {{ .Scratch.Add "class" " is-preload" -}}
   <body class="{{ .Scratch.Get "class" }}">
-    <div id="wrapper" class="divided" role="document">
+    <div id="page-wrapper" role="document">
       {{/*  {{ if and .IsHome .Site.Params.alert }}
         {{ partial "header/alert.html" . }}
+      {{ end }}  */}}
+      {{ partial "header/header.html" . }}
+      {{ if .IsHome }}
+      <!-- Banner -->
+      <section id="banner">
+        <div class="inner">
+          <h2>{{ .Site.Params.Title }}</h2>
+          <p>{{ .Site.Params.TitleAddition }}</p>
+          <ul class="actions special">
+            <li><a href="#" class="button primary">Activate</a></li>
+          </ul>
+        </div>
+        <a href="#one" class="more scrolly">Learn More</a>
+      </section>
       {{ end }}
-      {{ partial "header/header.html" . }}  */}}
-      <div class="content">
-        {{ block "main" . }}{{ end }}
-      </div>
     </div>
-    {{/*  {{ block "sidebar-footer" . }}{{ end }}  */}}
+    <div id="wrapper" class="divided">
+      {{ block "main" . }}{{ end }}
+    </div>
+    {{ block "sidebar-footer" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
     {{ partial "footer/script-footer.html" . }}
   </body>

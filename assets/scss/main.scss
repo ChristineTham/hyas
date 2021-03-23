@@ -8,6 +8,8 @@ $breakpoints: global ();
 // @import 'fontawesome-all.min.css';
 @import '/css/vendor/fontawesome/all.css';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700');
 
 /*
 	Story by HTML5 UP
@@ -185,3 +187,15 @@ $breakpoints: global ();
 // Layout.
 
 	@import 'layout/wrapper';
+
+// Spectral
+
+  @import 'spectral/page-wrappper';
+  @import 'spectral/header';
+  @import 'spectral/banner';
+  @import 'spectral/main';
+  @import 'spectral/landing';
+
+  // Eventually
+  @import 'components/bg';
+

@@ -1,5 +1,5 @@
 <!-- Header -->
-<header id="header" class="alt">
+<header id="header" {{- if .IsHome -}}class="alt"{{ end -}}>
   <h1><a href="{{ "/" | absURL }}">{{ .Site.Params.Title }}</a></h1>
   <nav id="nav">
     <ul>
