@@ -58,6 +58,7 @@
     "stylelint-config-standard": "^20.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.3"
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "pixi.js": "^5.3.8"
   }
 }

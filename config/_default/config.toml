@@ -93,10 +93,13 @@ toLower = false
     target = "static/css/vendor/fontawesome"
   [[module.mounts]]
     source = "leonsans/dist"
-    target = "assets/js/vendor/leonsans"
+    target = "static/js/vendor/leonsans"
   [[module.mounts]]
     source = "leonsans/examples/js"
     target = "assets/js/vendor/leon"
   [[module.mounts]]
     source = "leonsans/examples/data"
     target = "static/images/vendor/leonsans"
+  [[module.mounts]]
+    source = "node_modules/pixi.js/dist"
+    target = "static/js/vendor/pixi"
