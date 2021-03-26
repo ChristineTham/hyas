@@ -9,6 +9,11 @@
   weight = 20
 
 [[main]]
+  name = "Spectral Demo"
+  url = "/spectral-demo"
+  weight = 25
+
+[[main]]
   name = "Leon Sans"
   url = "/leonsans"
   weight = 30

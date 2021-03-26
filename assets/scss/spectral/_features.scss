@@ -9,7 +9,7 @@
   width: 100%;
 
   li {
-    @include padding(4em, 4em, (0,0,0,2em));
+    @include padding(4rem, 4rem, (0,0,0,2rem));
     display: block;
     position: relative;
     text-align: left;
@@ -25,31 +25,31 @@
 
     &:before {
       display: block;
-      color: _palette(accent2, bg);
+      color: _palette(accent);
       position: absolute;
-      left: 1.75em;
-      top: 2.75em;
-      font-size: 1.5em;
+      left: 1.75rem;
+      top: 4rem;
+      font-size: 2rem;
     }
 
     &:nth-child(1) {
-      border-top-left-radius: 3px;
+      border-top-left-radius: 4px;
     }
 
     &:nth-child(2) {
-      border-top-right-radius: 3px;
+      border-top-right-radius: 4px;
     }
 
     &:nth-last-child(1) {
-      border-bottom-right-radius: 3px;
+      border-bottom-right-radius: 4px;
     }
 
     &:nth-last-child(2) {
-      border-bottom-left-radius: 3px;
+      border-bottom-left-radius: 4px;
     }
 
     @include breakpoint('<=medium') {
-      @include padding(3em, 2em);
+      @include padding(3rem, 2rem);
       text-align: center;
 
       &:before {
@@ -61,7 +61,7 @@
     }
 
     @include breakpoint('<=small') {
-      @include padding(3em, 0);
+      @include padding(3rem, 0);
       background-color: transparent !important;
       border-top: solid 2px _palette(border);
       width: 100%;
