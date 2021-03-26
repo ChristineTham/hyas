@@ -15,16 +15,18 @@
 	header {
 		p {
 			position: relative;
-			margin: (_size(element-margin) * -0.325) 0 (_size(element-margin) * 0.75) 0;
-			font-style: italic;
+			margin: (_size(element-margin) * -0.7) 0 (_size(element-margin) * 0.75) 0;
+			font-style: normal;
+      font-family: _font(family-heading);
+      font-weight: _palette(weight);
 		}
 
 		h1 + p {
-			font-size: 1.375rem;
+			font-size: 1.4rem;
 		}
 
 		h2 + p {
-			font-size: 1.25rem;
+			font-size: 1.2rem;
 		}
 
 		h3 + p {
@@ -34,7 +36,7 @@
 		h4 + p,
 		h5 + p,
 		h6 + p {
-			font-size: 0.9rem;
+			font-size: 1rem;
 		}
 	}
 

@@ -59,6 +59,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
-    "pixi.js": "^5.3.8"
+    "pixi.js": "^5.3.9"
   }
 }

@@ -26,7 +26,7 @@
 
 // Size.
 	$size: (
-		border-radius:		4px,
+		border-radius:		8px,
 		border-radius-alt:	0.5rem,
 		border-width:		1px,
 		element-height:		2.75rem,
@@ -55,112 +55,56 @@
 
 // Palette.
 	$palette: (
-		color1:				#30363d,
-		color2:				#db8992,
-		color3:				#ab7aad,
-		color4:				#897cad,
-		color5:				#7794ce,
-		color6:				#64abb4,
-		color7:				#6ba78c,
+    rosely0: #27272a,
+    rosely1: #615f5f,
+    rosely2: #a49e9e,
+    rosely3: #f4eee8,
+    rosely4: #ec809e,
+    rosely5: #f7caca,
+    rosely6: #f8d7dd,
+    rosely7: #f4dede,
+    rosely8: #85677b,
+    rosely9: #b565a7,
+    roselyA: #be9cc1,
+    roselyB: #d2c4d6,
+    roselyC: #d2386c,
+    roselyD: #64bfa4,
+    roselyE: #3cadd4,
+    roselyF: #eada4f,
 
-		bg:					#ffffff,
-		bg-alt:				#f7caca,
-		fg:					#000000,
-		fg-bold:			#000000,
-		fg-light:			rgba(0,0,0,0.75),
-		border:				rgba(0,0,0,0.2),
-		border-alt:			rgba(0,0,0,0.075),
-		border-bg:			rgba(0,0,0,0.05),
-		border2:			#fff,
-		border2-bg:			rgba(144,144,144,0.5),
-    accent:				#b565a7,
+    color1: #f7caca,
+    color2: #f8d7dd,
+    color3: #f4dede,
+    color4: #f4eee8,
+    color5: #d2c4d6,
+    color6: #be9cc1,
+    color7: #ec809e,
 
-		invert: (
-			bg:				#000000,
-			bg-alt:			#222222,
-			fg:				#ffffff,
-			fg-bold:		#ffffff,
-			fg-light:		#ffffff,
-			border:			rgba(255,255,255,1.0),
-			border-alt:		rgba(255,255,255,0.125),
-			border-bg:		rgba(255,255,255,0.125),
-			accent:			#b565a7
-		),
+    bg:         #ffffff,
+    bg-alt:     #f7caca,
+    fg:         #27272a,
+    fg-bold:    #85677b,
+    fg-light:   #a49e9e,
+    border:     #be9cc1,
+    border-alt: #d2c4d6,
+    border-bg:  #f4dede,
+    accent:     #ec809e,
+    link:       #b565a7,
+    linkhover:  #be9cc1,
+    menu:       #b565a7,
+    menu-bg:      #f4dede,
 
-		accent1: (
-			bg:				#b565a7,
-			fg-bold:		#ffffff,
-			fg:				mix(#21b2a6, #ffffff, 25%),
-			fg-light:		mix(#21b2a6, #ffffff, 40%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
-		),
-
-		accent2: (
-			bg:				#00ffcc,
-			fg-bold:		#ffffff,
-			fg:				mix(#00ffcc, #ffffff, 25%),
-			fg-light:		mix(#00ffcc, #ffffff, 40%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
-		),
-
-		accent3: (
-			bg:				#00f0ff,
-			fg-bold:		#ffffff,
-			fg:				mix(#00f0ff, #ffffff, 25%),
-			fg-light:		mix(#00f0ff, #ffffff, 40%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
-		),
-
-		accent4: (
-			bg:				#76ddff,
-			fg-bold:		#ffffff,
-			fg:				mix(#76ddff, #ffffff, 25%),
-			fg-light:		mix(#76ddff, #ffffff, 40%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
-		),
-
-		accent5: (
-			bg:				#505393,
-			fg-bold:		#ffffff,
-			fg:				mix(#505393, #ffffff, 25%),
-			fg-light:		mix(#505393, #ffffff, 40%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
-		),
-
-		accent6: (
-			bg:				#ed4933,
-			fg-bold:		#ffffff,
-			fg:				mix(#ed4933, #ffffff, 25%),
-			fg-light:		mix(#ed4933, #ffffff, 40%),
-			border:			rgba(0,0,0,0.125),
-			border-bg:		rgba(255,255,255,0.075),
-			border2:		rgba(0,0,0,0.25),
-			border2-bg:		rgba(255,255,255,0.2)
-		),
-
-		accent7: (
-			bg:				#ffffff,
-			fg-bold:		#2E3842,
-			fg:				#4E4852,
-			fg-light:		#8E8892,
-			border:			#dfdfdf,
-			border-bg:		rgba(0,0,0,0.0375),
-			border2:		#bfbfbf,
-			border2-bg:		rgba(0,0,0,0.1)
-		)
+    invert: (
+      bg: #27272a,
+      bg-alt: #85677b,
+      fg: #ffffff,
+      fg-bold: #f7caca,
+      fg-light: #f4eee8,
+      border: rgba(255, 255, 255, 1),
+      border-alt: rgba(255, 255, 255, 0.125),
+      border-bg: rgba(255, 255, 255, 0.125),
+      accent: #ec809e,
+      link: #be9cc1,
+      linkhover: #b565a7,
+    )
   );

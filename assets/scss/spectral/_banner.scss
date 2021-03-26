@@ -25,7 +25,7 @@
     &:before, &:after {
       @include vendor('transition', 'width 0.85s ease');
       @include vendor('transition-delay', '0.25s');
-      background: _palette(invert, fg-bold);
+      background: _palette(invert, fg);
       content: '';
       display: block;
       height: 2px;

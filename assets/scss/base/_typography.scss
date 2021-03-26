@@ -41,9 +41,11 @@
 	a {
 		@include vendor('transition', 'color #{_duration(transition)} ease-in-out');
 		text-decoration: underline;
+    color: _palette(link);
 
 		&:hover {
 			text-decoration: none;
+      color: _palette(linkhover);
 		}
 	}
 
@@ -78,28 +80,28 @@
 	}
 
 	h1 {
-		font-size: 3.5rem;
+		font-size: 4rem;
 		line-height: 1.2;
 	}
 
 	h2 {
-		font-size: 2.25rem;
+		font-size: 2.5rem;
 	}
 
 	h3 {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	h4 {
-		font-size: 1.1rem;
+		font-size: 1.5rem;
 	}
 
 	h5 {
-		font-size: 0.9rem;
+		font-size: 1.2rem;
 	}
 
 	h6 {
-		font-size: 0.7rem;
+		font-size: 1rem;
 	}
 
 	sub {
@@ -116,6 +118,7 @@
 
 	blockquote {
 		border-left: solid (_size(border-width) * 4);
+    font-family: _font(family-heading);
 		font-style: italic;
 		margin: 0 0 _size(element-margin) 0;
 		padding: (_size(element-margin) / 4) 0 (_size(element-margin) / 4) _size(element-margin);
@@ -173,19 +176,19 @@
 		}
 
 		h1 {
-			font-size: 2.5rem;
+			font-size: 3rem;
 		}
 
 		h2 {
-			font-size: 2rem;
+			font-size: 2.5rem;
 		}
 
 		h3 {
-			font-size: 1.25rem;
+			font-size: 2rem;
 		}
 
 		h4 {
-			font-size: 1rem;
+			font-size: 1.5rem;
 		}
 	}
 
@@ -201,10 +204,10 @@
 		}
 
 		a {
-			color: _palette($p, fg-bold);
+			color: _palette($p, link);
 
 			&:hover {
-				color: _palette($p, accent);
+				color: _palette($p, linkhover);
 			}
 		}
 

@@ -21,18 +21,7 @@
       {{ end }}  */}}
       {{ partial "header/header.html" . }}
       {{ if .IsHome }}
-      <!-- Banner -->
-      <section id="banner">
-        <div class="inner">
-          <h2>{{ .Site.Params.Title }}</h2>
-          <p>{{ .Site.Params.TitleAddition }}</p>
-          {{ partial "leonsans/plants" }}
-          <ul class="actions special">
-            <li><a href="#" class="button primary">Activate</a></li>
-          </ul>
-        </div>
-        <a href="#one" class="more scrolly">Learn More</a>
-      </section>
+        {{ partial "header/home.html" . }}
       {{ end }}
     </div>
     <div id="wrapper" class="divided">

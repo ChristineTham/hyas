@@ -2,7 +2,7 @@
 
 #header {
   @include vendor('transition', 'background-color #{_duration(transitions)} ease');
-  background: _palette(bg);
+  background: _palette(menu-bg);
   height: 3em;
   left: 0;
   line-height: 3em;
@@ -17,7 +17,7 @@
     left: 1.25em;
     line-height: inherit;
     position: absolute;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     top: 0;
 
     a {
@@ -51,7 +51,7 @@
 
         > a {
           border: 0;
-          color: _palette(accent);
+          color: _palette(menu);
           display: block;
           font-size: 0.8em;
           letter-spacing: _size(letter-spacing-alt);

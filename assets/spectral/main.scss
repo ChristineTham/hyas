@@ -407,7 +407,7 @@ $breakpoints: global ();
 		}
 
 		&:focus {
-			box-shadow: 0 0 0 2px _palette(accent1, bg);
+			box-shadow: 0 0 0 2px _palette(border-alt);
 		}
 	}
 
@@ -488,7 +488,7 @@ $breakpoints: global ();
 
 		&:focus + label {
 			&:before {
-				box-shadow: 0 0 0 2px _palette(accent1, bg);
+				box-shadow: 0 0 0 2px _palette(border-alt);
 			}
 		}
 	}
@@ -1403,8 +1403,8 @@ $breakpoints: global ();
 		@include vendor('transform', 'translateX(20em)');
 		@include vendor('transition', 'transform #{_duration(menu)} ease');
 		-webkit-overflow-scrolling: touch;
-		background: _palette(accent1, bg);
-		color: _palette(accent1, fg-bold);
+		background: _palette(menu-g);
+		color: _palette(menu);
 		height: 100%;
 		max-width: 80%;
 		overflow-y: auto;
@@ -1420,7 +1420,7 @@ $breakpoints: global ();
 			padding: 0;
 
 			> li {
-				border-top: solid 1px _palette(accent1, border);
+				border-top: solid 1px _palette(border);
 				margin: 0.5em 0 0 0;
 				padding: 0.5em 0 0 0;
 
