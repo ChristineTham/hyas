@@ -1,0 +1,5 @@
+{{ with ((index (.Resources.ByType "image") 0) | default (resources.Get "images/banner.jpg")) }}
+  <div class="image">
+    <img src="{{ .RelPermalink }}" alt="{{ replace .Name "-" " " | title }}" caption="{{ replace .Name "-" " " | title }}" />
+  </div>
+{{ end }}

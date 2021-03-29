@@ -4,14 +4,14 @@
   weight = 10
 
 [[main]]
+  name = "Blog"
+  url = "/blog"
+  weight = 15
+
+[[main]]
   name = "Demo"
   url = "/demo"
   weight = 20
-
-[[main]]
-  name = "Spectral Demo"
-  url = "/spectral-demo"
-  weight = 25
 
 [[main]]
   name = "Leon Sans"
@@ -19,8 +19,8 @@
   weight = 30
 
 [[main]]
-  name = "Spectral"
-  url = "/spectral"
+  name = "Test Pages"
+  url = "/testpages"
   weight = 40
 
 [[main]]

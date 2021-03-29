@@ -56,7 +56,7 @@ notAlternative = true
   category = "categories"
 
 [permalinks]
-  blog = "/:title/"
+  blog = "/blog/:title"
 
 [related]
 threshold = 80

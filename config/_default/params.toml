@@ -3,7 +3,7 @@ titleSeparator = "-"
 titleAddition = "Through A Lens"
 description = "Hugo starter helping you build modern websites."
 
-images = ["hyas.png"]
+images = ["images/banner.jpg"]
 
 twitterSite = "@chris1tham"
 twitterCreator = "@chris1tham"
