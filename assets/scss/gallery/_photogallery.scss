@@ -1,0 +1,66 @@
+/**/
+/* GALLERY */
+/**/
+
+.photogallery{
+  width: 100%;
+  display: block;
+  margin:0 auto;
+}
+
+/* Extra Extra Small Devices, Phones */
+@media only screen and (min-width : 360px) {
+  .photogallery {
+    column-count: 1;
+    column-gap: 3px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px) {
+  .photogallery {
+    column-count: 1;
+    column-gap: 3px;
+  }
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 736) {
+  .photogallery {
+    column-count: 3;
+    column-gap: 3px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 980) {
+  .photogallery { /* Masonry container */
+      column-count: 4;
+      column-gap: 3px;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1280px) {
+  .photogallery{
+    column-count: 4;
+    column-gap: 0.2rem;
+    width: 100%;
+  }
+}
+
+/* Extra Large Devices, Wide Screens */
+@media only screen and (min-width : 1680px) {
+  .photogallery{
+    column-count: 4;
+    column-gap: 0.2rem;
+    width: 100%;
+  }
+}
+
+
+.photogallery-item { /* Masonry bricks or child elements */
+    background-color: #eee;
+    display: inline-block;
+    margin: 0 0 0.2rem;
+    width: auto;
+}

@@ -1,0 +1,18 @@
+<div class="gallery style2 medium lightbox onscroll-fade-in">
+  {{ with .Page.Resources.ByType "image" }}
+    {{ range . }}
+      <article>
+        <a href="{{ .RelPermalink }}" class="image">
+          <img src="{{ (.Resize "360x").RelPermalink }}" alt="{{ .Name }}" />
+        </a>
+        <div class="caption">
+          <h3>{{ .Name }}</h3>
+          <p>{{ with .Exif }}{{ .Date }}{{ end }}</p>
+          <ul class="actions fixed">
+            <li><span class="button small">Details</span></li>
+          </ul>
+        </div>
+      </article>
+    {{ end }}
+  {{ end }}
+</div>
