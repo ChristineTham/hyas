@@ -1,5 +1,6 @@
 {{ define "main" }}
-  <section id="one" class="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
+<div id="wrapper" class="divided">
+  <section id="one" class="banner {{ .Param "bannerStyle" }}">
     <div class="content">
       <h1>{{ .Title }}</h1>
       <p class="major">{{ .Description }}</p>
@@ -7,13 +8,11 @@
         <li><a href="#first" class="button big wide smooth-scroll-middle">Browse</a></li>
       </ul>
     </div>
-    <div class="image">
-      <img src="/images/banner.jpg" alt="" />
-    </div>
+    {{ partial "content/featured-image" . }}
   </section>
   {{ $paginator := .Paginate (.Data.Pages) -}}
   {{ range $index, $page := $paginator.Pages -}}
-    <section class="spotlight style1 {{ cond (eq 0 (mod $index 2)) "orient-left" "orient-right" }} content-align-left image-position-center onscroll-image-fade-in">
+    <section class="spotlight style1 {{ cond (eq 0 (mod $index 2)) "orient-right" "orient-left" }} content-align-left image-position-center onscroll-image-fade-in">
       <div class="content">
         <h2>{{ $page.Title }}</h2>
         <p>{{ $page.Description }}</p>
@@ -24,4 +23,5 @@
       {{ partial "content/featured-image" . }}
     </section>
   {{ end -}}
+</div>
 {{ end }}

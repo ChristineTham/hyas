@@ -35,4 +35,6 @@ footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\
 alert = false
 alertText = "Deliver web projects 10x faster. <a class=\"alert-link\" href=\"https://www.netlify.com/whitepaper/\" target=\"_blank\" rel=\"noopener\">Get the free enterprise paper →</a>"
 
-bannerImage = "images/banner.jpg"
+# Banner
+featuredImage = "images/banner.jpg"
+bannerStyle = "style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right"

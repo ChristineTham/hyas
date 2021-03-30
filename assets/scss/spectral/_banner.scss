@@ -1,6 +1,6 @@
 /* Banner */
 
-#banner {
+#homebanner {
   @include vendor('display', 'flex');
   @include vendor('flex-direction', 'column');
   @include vendor('justify-content', 'center');
@@ -128,7 +128,7 @@
 }
 
 body.is-preload {
-  #banner {
+  #homebanner {
     h2 {
       @include vendor('transform', 'scale(0.95)');
       opacity: 0;

@@ -1,14 +1,15 @@
 {{ define "main" }}
   <!-- Main -->
-    <article id="one" class="banner style2 orient-center content-align-center image-position-right onload-image-fade-in onload-content-fade-right">
-      <header>
-        <h1>{{ .Title }}</h2>
-        <p class="major">{{ .Description }}</p>
-      </header>
-      <section class="wrapper style1">
-        <div class="inner">
-          {{ .Content }}
-        </div>
-      </section>
-    </article>
+  <section id="one" class="banner style2 orient-center content-align-center image-position-right onload-image-fade-in onload-content-fade-right">
+    <div class="content">
+      <h1>{{ .Title }}</h1>
+      <p class="major">{{ .Description }}</p>
+    </div>
+    {{ partial "content/featured-image" . }}
+  </section>
+  <section class="wrapper style1">
+    <div class="inner">
+      {{ .Content }}
+    </div>
+  </section>
 {{ end }}

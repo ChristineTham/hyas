@@ -24,9 +24,7 @@
         {{ partial "header/home.html" . }}
       {{ end }}
     </div>
-    <div id="wrapper" class="divided">
-      {{ block "main" . }}{{ end }}
-    </div>
+    {{ block "main" . }}{{ end }}
     {{ block "sidebar-footer" . }}{{ end }}
     {{ partial "footer/footer.html" . }}
     {{ partial "footer/script-footer.html" . }}

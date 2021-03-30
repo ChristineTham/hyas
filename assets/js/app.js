@@ -11,7 +11,7 @@
 		$wrapper = $('#wrapper'),
 		$pageWrapper = $('#page-wrapper'),
     $bd = document.querySelector('body'),
-		$banner = $('#banner'),
+		$banner = $('#homebanner'),
 		$header = $('#header');
 
 	// Breakpoints.
